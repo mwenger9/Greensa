@@ -1,0 +1,5 @@
+.hover\:border-red-500:hover {
+    border-width: 3px;
+    border-color: red;
+    border-radius: 0.5rem;
+}

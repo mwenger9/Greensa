@@ -1,0 +1,53 @@
+<app-vertical-progress-bar class="z-20 fixed"></app-vertical-progress-bar>
+<div class="flex flex-col h-screen items-center justify-center">
+    <!-- Header -->
+    <app-header class="w-full" id="section1"></app-header>
+
+      <!-- Background Image -->
+      <img src="/assets/images/image7.jpg" 
+           alt="Home background" 
+           class="absolute inset-0 w-full h-auto object-cover z-0 mt-44 filter blur-[2px] brightness-70"
+        >
+      
+    
+
+    <!-- Body Content -->
+    <main class="flex items-center justify-center w-full h-full z-10 p-4">
+      <div class="flex flex-col bg-white shadow-lg rounded-lg p-6 w-2/3 cursor-default">
+        
+        <!-- Title -->
+        <h2 class="flex justify-center text-gray-700 font-bold mb-4 text-6xl">
+          Green'sa c'est quoi ?
+        </h2>
+    
+        <!-- Content -->
+        <div class="text-gray-700 space-y-4 text-lg">
+          <p>🌍 <span class="font-bold">Notre planète, notre combat !</span></p>
+          <p>
+            Bienvenue dans notre association étudiante écolo, un collectif jeune, engagé et prêt à bousculer les habitudes pour construire un avenir plus vert ! 
+            Ici, on se bat pour une transition écologique concrète, accessible, et surtout, fun.
+          </p>
+          <p>
+            <strong class="text-green-700">Notre mission ?</strong> Inspirer, sensibiliser et agir ensemble pour protéger l’environnement à notre échelle, 
+            tout en renforçant la solidarité entre étudiant·e·s !
+          </p>
+        </div>    
+    
+        <!-- Green line at the bottom -->
+        <div class="border-b-4 border-green-500 mt-4 self-stretch"></div>
+      </div>
+    </main>
+    
+</div>
+
+<!-- Bike location section (2) -->
+<app-bike-rent-section id="section2"></app-bike-rent-section>
+
+<!-- Conference section (3)-->
+<app-conference-section id="section3"></app-conference-section>
+
+<!-- Frip section (4)-->
+<app-frip-section id="section4"></app-frip-section>
+
+<!-- Footer section (5)-->
+<app-footer id="section5"></app-footer>

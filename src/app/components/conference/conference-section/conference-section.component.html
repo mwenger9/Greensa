@@ -1,0 +1,81 @@
+<div class="bg-green-100 bg-opacity-40">
+  <div 
+    class="w-full h-full py-8 flex flex-col items-center" 
+    data-aos="fade-up"
+    data-aos-duration="600">
+    
+    <!-- Title -->
+    <p 
+      class="text-3xl font-bold text-center text-gray-700 mb-2"
+      data-aos="fade-down"
+      data-aos-duration="600">
+      Conférences
+    </p>
+
+    <!-- Content -->
+    <p 
+      class="text-gray-700 text-center max-w-3xl text-lg"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="600">
+      On organise, tout au long de l’année, des conférences interactives et inspirantes. <br> 
+      Nous invitons spontanément des intervenant·e·s de divers horizons : <br>
+      chercheur·euse·s, député·e·s, ONG et autres expert·e·s engagé·e·s dans la transition écologique. <br><br>
+      Ces événements sont l’occasion d’échanger et de s’informer sur des enjeux environnementaux actuels, 
+      dans une atmosphère conviviale et stimulante.
+    </p>
+
+    <!-- Buttons -->
+    <div 
+      class="flex justify-center gap-8"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+      data-aos-duration="600">
+      <app-route-button
+        [showbutton]="true"
+        buttonText="Prochaine conf"
+        (click)="goToNextConference()">
+      </app-route-button>
+      
+      <app-route-button
+        [showbutton]="true"
+        buttonText="Calendrier"
+        (click)="goToToday()">
+      </app-route-button>
+    </div>
+  </div>
+
+  <!-- Example conf section -->
+  <div 
+    class="flex justify-center space-x-16 mt-2"
+    data-aos="fade-up"
+    data-aos-delay="600"
+    data-aos-duration="600">
+    
+    <div 
+      *ngFor="let conference of displayed_conferences"
+      (click)="goToConference(conference.date)"
+      class="group flex flex-col items-center bg-white border border-gray-300 rounded-md w-96 mb-2 transition-transform duration-200 cursor-pointer"
+      data-aos="zoom-in"
+      data-aos-delay="800"
+      data-aos-duration="600">
+      
+      <!-- Wrapper for Hover Scale -->
+      <div class="group-hover:scale-105 will-change-transform transform transition-transform duration-300">
+        <img 
+          [src]="conference.image" 
+          [alt]="conference.title" 
+          class="h-auto w-full object-cover rounded-t-md">
+        
+        <div class="p-4 text-left">
+          <h3 class="text-lg font-semibold text-gray-800">
+            {{ conference.title }}
+          </h3>
+          <p class="text-gray-600 overflow-hidden">
+            {{ conference.details }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

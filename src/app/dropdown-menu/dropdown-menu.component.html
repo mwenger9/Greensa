@@ -1,0 +1,33 @@
+<div class="relative inline-block text-left" id="dropdown-menu">
+  <div>
+    <button 
+      (click)="toggleDropdown()" 
+      class="inline-flex justify-start w-64 rounded-md px-4 py-2 bg-white text-sm font-medium hover:text-green-500 text-gray-700 focus:outline-none">
+      <span class="relative" [ngClass]="{'text-green-500': isOpen}">
+        {{title}}
+      </span>
+      <svg 
+        class="-mr-3 ml-3 h-5 w-5 transition-transform duration-200" 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z" />
+      </svg>
+    </button>
+  </div>
+
+  <div *ngIf="isOpen" class="dropdown-menu absolute z-20 mt-2 w-64 rounded-md shadow-lg bg-white transition-all duration-300 ease-out">
+    <div class="py-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+      <ng-container *ngFor="let option of options">
+        <button 
+          (click)="selectOption(option)" 
+          class="dropdown-option block px-4 py-3 text-sm text-gray-700 w-full text-left" 
+          role="menuitem">
+          {{ option }}
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>

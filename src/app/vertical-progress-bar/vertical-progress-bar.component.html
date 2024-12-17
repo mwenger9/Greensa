@@ -1,0 +1,11 @@
+<div class="fixed z-10 left-0 top-40 w-16 flex flex-col justify-center border-2 border-green-600 ml-4 rounded bg-white">
+    <div *ngFor="let section of sections" 
+         class="relative mb-4 w-full"
+         (click)="scrollTo(section.id)">
+        <div class="w-full h-16 mt-5 flex items-center justify-center cursor-pointer hover:scale-125 transition-transform duration-200">
+            <i [class]="section.image" 
+               [ngStyle]="{'opacity': getOpacity(section.id)}" 
+               class="text-xl"></i>
+        </div>
+    </div>
+</div>

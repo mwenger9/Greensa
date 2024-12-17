@@ -1,0 +1,38 @@
+<div class="flex justify-center w-full h-full bg-white mb-16">
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-2 grid-rows-2 gap-1 h-screen max-w-6xl mt-2 mb-2">
+        <!-- First Image -->
+        <img src="assets/images/bike_workshop.png" 
+             alt="Image de l'atelier dans lequel sont réparés les vélos"
+             class="w-full h-full object-cover rounded-md shadow-lg"
+             data-aos="fade-right">
+        
+        <!-- First Text Card -->
+        <div class="flex items-center w-2/3 ml-28" data-aos="fade-left">
+            <app-text-card
+                title="Green'sa te loue un vélo !"
+                body="Pour te déplacer, pour tes loisirs, pour venir à l'INSA ou à ton stage, tu cherches un vélo ?"
+                [showbutton]="true"
+                buttonText="En savoir plus"
+                routePath="bike-rent">
+            </app-text-card>
+        </div>
+
+        <!-- Second Text Card -->
+        <div class="flex items-center w-2/3 ml-20" data-aos="fade-right">
+            <app-text-card
+                title="Où trouver un vélo à Rennes ?"
+                body="Green'sa loue des vélos aux étudiant.es de l'INSA mais notre stock est limité."
+                [showbutton]="true"
+                buttonText="Quels bons plans vélo ?"
+                routePath="bike-rent">
+            </app-text-card>
+        </div>
+
+        <!-- Second Image -->
+        <img src="assets/images/bike_fixed.png" 
+             alt="Image de vélos réparés"
+             class="w-full h-full object-cover rounded-md shadow-lg"
+             data-aos="fade-up">
+    </div>
+</div>

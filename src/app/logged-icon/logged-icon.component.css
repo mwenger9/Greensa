@@ -1,0 +1,6 @@
+/* logged-icon.component.css */
+.relative .absolute {
+    z-index: 10;
+    pointer-events: auto;
+  }
+  

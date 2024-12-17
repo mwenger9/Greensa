@@ -1,0 +1,69 @@
+<div>
+  <a href="/">
+    <img src="assets/images/logo-detour.webp" alt="" class="absolute max-h-20 m-4">
+
+  </a>
+</div>
+
+
+<div class="flex min-h-screen">
+  <!-- Left Section (Login Form or Message) -->
+  <div 
+    class="transition-all duration-500 flex justify-center items-center"
+    [ngClass]="{
+      'bg-[#58af34]': !isLogin, 
+      'bg-opacity-25': !isLogin, 
+      'bg-gray-50': isLogin, 
+      'w-2/3': isLogin, 
+      'w-1/3': !isLogin
+    }"
+  >
+    <!-- Ensure that the login form occupies the full available space -->
+    <div class="w-full h-full max-w-lg flex justify-center items-center p-12">
+      <!-- Login Title and Content (Login Form or Login Message) -->
+      <ng-container *ngIf="isLogin; else loginMessage">
+        <app-login-form (toggleForm)="toggleForm()"></app-login-form>
+      </ng-container>
+
+      <ng-template #loginMessage>
+        <div class="text-center text-gray-700">
+          <h2 class="text-4xl font-extrabold text-center text-black">Déjà un compte ?</h2>
+          <button (click)="toggleForm()" class="mt-6 bg-green-500 font-semibold text-white px-8 py-4 rounded-full text-xl">
+            Se connecter
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- Right Section (Register Form or Message) -->
+  <div 
+    class="transition-all duration-500 flex justify-center items-center text-white"
+    [ngClass]="{
+      'bg-[#58af34]': isLogin, 
+      'bg-opacity-25': isLogin, 
+      'bg-gray-50': !isLogin, 
+      'w-1/3': isLogin, 
+      'w-2/3': !isLogin
+    }"
+  >
+    <div class="text-center">
+      <!-- Register Title and Content (Register Form or Register Message) -->
+      <h1 class="text-4xl font-extrabold text-black" *ngIf="isLogin">Pas encore de compte ?</h1>
+
+      <!-- Register Form or Register Message -->
+      <ng-container *ngIf="!isLogin; else registerMessage">
+        <app-register-form (toggleForm)="toggleForm()"></app-register-form>
+      </ng-container>
+
+      <ng-template #registerMessage>
+        <div class="text-center text-gray-700">
+          <p class="text-xl">En créer un te permettra de profiter des services de Green'sa</p>
+          <button (click)="toggleForm()" class="mt-6 bg-green-500 font-semibold text-white px-8 py-4 rounded-full text-xl">
+            Créer un compte
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

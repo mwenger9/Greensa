@@ -1,0 +1,56 @@
+.mat-calendar {
+  width : 600px;
+  font-size: x-large;
+}
+
+/* All text in black*/
+::ng-deep .mat-calendar .mat-calendar-period-button,
+::ng-deep .mat-calendar .mat-calendar-previous-button,
+::ng-deep .mat-calendar .mat-calendar-next-button,
+::ng-deep .mat-calendar-body-cell-content {
+  color: black !important;
+}
+
+/* Labels in grey */
+::ng-deep .mat-calendar-table-header th {
+  color : grey !important;
+}
+
+/* Transparent focus */ 
+::ng-deep .mat-calendar-body-selected:focus,
+::ng-deep .mat-calendar-body-selected:active {
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+/* Selection in green + text in white*/
+::ng-deep .mat-calendar .mat-calendar-body-selected,
+::ng-deep .mat-calendar-body-active {
+  background-color: #4caf50 !important; /* Set to a green color */
+  border-radius: 50% !important; /* Make it a circle */
+  color: white !important; /* Ensure text color is readable */
+}
+
+/* Hover content in light green */
+::ng-deep .mat-calendar-body-cell:hover {
+  background-color: #A5D6A7 !important; /* Light green background */
+  border-radius: 50%; /* Make it a circle */
+  color : black !important;
+  opacity: 25% !important;
+}
+::ng-deep .mat-calendar-period-button:hover {
+  background-color: #A5D6A7 !important; /* Light green background */
+  color : black !important;
+  opacity: 25% !important;
+}
+::ng-deep .mat-calendar-body-cell-content:hover{
+  background-color: #A5D6A7 !important; /* Light green background */
+  border-radius: 50%; /* Make it a circle */
+  color : black !important;
+}
+
+/* Conference date in light green circle*/
+::ng-deep .conference-date .mat-calendar-body-cell-content {
+  background-color: #A5D6A7; /* Light green background */
+  border-radius: 50%;
+}

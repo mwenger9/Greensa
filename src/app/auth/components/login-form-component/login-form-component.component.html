@@ -1,0 +1,59 @@
+<form (ngSubmit)="onSubmit()" class="space-y-8 w-full">
+  <!-- Title -->
+  <h2 class="text-4xl font-extrabold text-center text-gray-800">Se connecter à son compte</h2>
+
+  <!-- Email Address -->
+  <div class="flex flex-col">
+    <label for="email" class="text-lg font-medium text-gray-700">Adresse mail</label>
+    <input
+      id="email"
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      class="mt-2 p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+      placeholder="Entrez votre adresse mail"
+    />
+  </div>
+
+  <!-- Password -->
+  <div class="flex flex-col">
+    <label for="password" class="text-lg font-medium text-gray-700">Mot de passe</label>
+    <input
+      id="password"
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+      class="mt-2 p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+      placeholder="Entrez votre mot de passe"
+    />
+  </div>
+
+  <!-- Submit Button -->
+  <div class="flex items-center justify-between">
+    <button
+      (click)="onSubmit()"
+      type="submit"
+      [disabled]="!email || !password"
+      class="w-full py-3 px-6 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-xl disabled:bg-gray-300
+      disabled:hover:cursor-not-allowed"
+    >
+      Connexion
+    </button>
+  </div>
+  
+  <!-- Forgot Password Link -->
+  <div class="text-center mt-6">
+    <a href="#" class="text-lg text-blue-600 hover:underline">Mot de passe oublié ?</a>
+  </div>
+</form>
+
+<div class="border-b border-gray-300 mt-8"></div>
+
+<!-- Social Login Icons -->
+<div class="flex justify-between items-center scale-90 mt-6">
+  <img src="/assets/images/Insa-rennes-logo.webp" alt="Logo insa rennes" class="max-w-72">
+  <img src="/assets/images/Google_Icons-09-512.webp" alt="Logo Google" class="max-w-32 scale-75">
+  <img src="/assets/images/facebook-logo-0.webp" alt="Logo Facebook" class="max-w-32 scale-75">
+</div>

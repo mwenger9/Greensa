@@ -1,0 +1,7 @@
+.bg-gray-300 {
+    transition: opacity 0.3s;
+}
+
+.text-xl {
+    font-size: 24px; /* Adjust size as needed */
+}

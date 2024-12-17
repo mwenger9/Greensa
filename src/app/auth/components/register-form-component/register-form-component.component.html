@@ -1,0 +1,79 @@
+<form (ngSubmit)="onSubmit()" class="space-y-8 w-full">
+    <!-- Title -->
+    <h2 class="text-4xl font-extrabold text-center text-gray-800">Créer un compte</h2>
+  
+    <!-- Name -->
+    <div class="flex flex-col">
+      <label for="name" class="text-lg font-medium text-gray-700">Nom</label>
+      <input
+        id="name"
+        type="text"
+        [(ngModel)]="name"
+        name="name"
+        required
+        class="text-black mt-2 p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+        placeholder="Entrez votre nom"
+      />
+    </div>
+  
+    <!-- Email Address -->
+    <div class="flex flex-col">
+      <label for="email" class="text-lg font-medium text-gray-700">Adresse mail</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        class="text-black mt-2 p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+        placeholder="Entrez votre adresse mail"
+      />
+    </div>
+  
+    <!-- Password -->
+    <div class="flex flex-col relative">
+      <label for="password" class="text-lg font-medium text-gray-700">Mot de passe</label>
+      <input
+        id="password"
+        [type]="passwordVisible ? 'text' : 'password'"
+        [(ngModel)]="password"
+        name="password"
+        required
+        class="text-black mt-2 p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+        placeholder="Entrez votre mot de passe"
+      />
+      <!-- Eye Icon to Toggle Password Visibility -->
+      <button
+        type="button"
+        (click)="togglePasswordVisibility()"
+        class="absolute inset-y-0 right-3 flex items-center mt-8 text-gray-600 focus:outline-none"
+      >
+        <svg *ngIf="passwordVisible" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm-2-6a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+        </svg>
+        <svg *ngIf="!passwordVisible" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12c0 3.5-2.5 6-6 6S3 15.5 3 12s2.5-6 6-6 6 2.5 6 6zm-6 4c1.5 0 3-1 3-2.5S10.5 11 9 11s-3 1-3 2.5S7.5 16 9 16z" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Submit Button -->
+    <div class="flex items-center justify-between">
+      <button
+        type="submit"
+        class="w-full py-3 px-6 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-xl"
+      >
+        Créer un compte
+      </button>
+    </div>
+  </form>
+  
+  <div class="border-b border-gray-300 mt-8"></div>
+  
+  <!-- Social Login Icons -->
+  <div class="flex justify-between items-center scale-90 mt-6">
+    <img src="/assets/images/Insa-rennes-logo.webp" alt="Logo insa rennes" class="max-w-72">
+    <img src="/assets/images/Google_Icons-09-512.webp" alt="Logo Google" class="max-w-32 scale-75">
+    <img src="/assets/images/facebook-logo-0.webp" alt="Logo Facebook" class="max-w-32 scale-75">
+  </div>
+  

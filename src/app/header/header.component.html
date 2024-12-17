@@ -1,0 +1,39 @@
+<div>
+  <header class="flex items-center justify-between p-4 bg-white shadow">
+    <div class="flex items-center space-x-10">
+      <!-- Logo -->
+      <a href="/">
+        <img src="assets/images/logo_greensa.png" alt="Logo" class="size-20">
+        
+      </a>
+
+      <!-- Dropdown Menus -->
+      <app-dropdown-menu title="Nos services" [options]="['Location de vélos', 'Conférences','Frip\'INSA']"></app-dropdown-menu>
+      <button class="inline-flex justify-between w-64 rounded-md px-4 py-2 bg-white text-sm font-medium hover:text-green-500 text-gray-700 focus:outline-none"> À propos</button>
+    </div>
+
+    <div class="flex space-x-4">
+      <!-- Conditional Display: Show buttons if userType is 'guest'; otherwise show UserMenuComponent -->
+      <ng-container *ngIf="userType === 'guest'; else loggedInTemplate">
+      <button 
+        class="text-green-500 px-4 py-2 rounded" 
+        (click)="navigateToAuth(true)">
+        Se connecter
+      </button>
+      <button 
+        class="bg-green-500 text-white px-4 py-2 rounded-full" 
+        (click)="navigateToAuth(false)">
+        Créer un compte
+      </button>  
+      </ng-container>
+      
+      <!-- User Menu Component for logged-in users -->
+      <ng-template #loggedInTemplate>
+        <app-logged-icon class="mr-20"></app-logged-icon>
+      </ng-template>
+    </div>
+  </header>
+
+  <!-- Separator Line -->
+  <div class="border-b border-gray-300"></div>
+</div>

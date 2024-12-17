@@ -1,0 +1,23 @@
+  <div class="relative inline-block z-20">
+    <!-- User Icon -->
+    <button (click)="toggleMenu()" class="p-2">
+      <img src="assets/images/user-icon.png" alt="User Icon" class="w-18 h-12">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div
+      *ngIf="isMenuOpen" 
+      class="absolute top-full mt-1 left-0 w-40 bg-white border border-gray-300 rounded-md shadow-lg z-10"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="p-4 text-center">
+        <span class="font-semibold text-gray-700">{{ userType === 'admin' ? 'Admin' : 'User' }}</span>
+      </div>
+      <hr class="my-1">
+      <button 
+        (click)="logout()" 
+        class="w-full px-4 py-2 text-center text-red-500 bg-transparent hover:text-blue-500 hover:cursor-pointer">
+        Log Out
+      </button>
+    </div>
+  </div>

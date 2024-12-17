@@ -1,0 +1,63 @@
+/*Larger partial frame closer to the center*/
+.frip-section::before,
+.frip-section::after {
+    content: "";
+    position: absolute;
+    border: 3px solid #38a169; 
+    width: 100px; 
+    height: 100px; 
+}
+.frip-section::before {
+    top: 10%;
+    left: 10%;
+    border-right: none;
+    border-bottom: none;
+}
+.frip-section::after {
+    bottom: 10%;
+    right: 10%;
+    border-left: none;
+    border-top: none;
+}
+
+/* Bubble initial styling */
+.bubble {
+    @apply flex items-center justify-center border-4 border-green-500 text-black
+        rounded-full w-48 h-48 transition-all duration-300 ease-in-out transform;
+    pointer-events: auto;
+}
+    
+/* Text inside the bubble when it's in circle form */
+.bubble-text {
+    @apply font-bold;
+    font-size: x-large;
+    z-index: 10;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Hidden content inside the bubble that shows on hover */
+.bubble-content {
+    @apply absolute text-black font-medium opacity-0 text-left break-words mt-2 p-4;
+    font-size: large;
+    white-space: normal;
+    transition: opacity 0.15s ease-in-out 0s;
+}
+
+/* Expand the bubble into a larger rectangle on hover */
+.bubble:hover {
+    @apply w-80 h-48 rounded-lg border-4 border-green-600;
+}
+.bubble-long-content:hover {
+    @apply h-80;
+}
+
+/* Show hidden content and hide main text on hover */
+.bubble:hover .bubble-content {
+    @apply opacity-100;
+    transition-delay: 0.3s;
+}
+
+.bubble:hover .bubble-text {
+    @apply opacity-0;
+    transition-delay: 0.1s;
+}

@@ -1,0 +1,28 @@
+<div class="flex w-screen h-full">
+
+  <!-- Sidebar for Conference Details -->
+  <div *ngIf="selectedConference" 
+       class="flex flex-col w-1/4 h-screen items-center text-left fixed left-0 top-28 p-4 border border-gray-500 bg-gradient-to-b from-white to-green-200 z-0">
+    <img 
+      class="h-2/3 w-full rounded-md mb-2"
+      [src]="selectedConference.image" 
+      alt="Conference Image">
+    <h3 class="text-xl font-bold mt-2">
+      {{ selectedConference.title }}
+    </h3>
+    <p class="text-gray-700 px-4">
+      {{ selectedConference.details }}
+    </p>
+  </div>
+
+  <!-- Calendar Component -->
+  <div class="flex flex-1 w-full h-full justify-center items-center">
+    <mat-calendar
+      class="border-2 border-green-500"
+      [dateClass]="highlightConferenceDates"
+      [startAt]="selectedDate"
+      [(selected)]="selectedDate"
+      (selectedChange)="onDateSelected($event)">
+    </mat-calendar>
+  </div>
+</div>

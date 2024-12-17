@@ -1,0 +1,47 @@
+<div 
+  class="frip-section flex-col h-full relative" 
+  data-aos="fade-in"
+  data-aos-duration="1000">
+  
+  <!-- Logo -->
+  <div 
+    class="flex justify-center h-auto top-32 relative"
+    data-aos="zoom-in"
+    data-aos-duration="1000">
+    <img src="/assets/images/logo_frip_insa.png" alt="Logo frip'INSA">
+  </div>
+  
+  <!-- Info Bubbles Section -->
+  <div 
+    class="flex justify-center items-center h-2/3"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-delay="200">
+    
+    <!-- Info Bubbles Container -->
+    <div 
+      class="flex flex-row justify-center items-center gap-16"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="400">
+      
+      <!-- Individual Bubble -->
+      <div 
+        *ngFor="let bubble of info_bubbles; let i = index"
+        class="bubble-wrapper"
+        data-aos="zoom-in"
+        [attr.data-aos-delay]="500 + (i * 100)"
+        data-aos-duration="1000">
+        
+        <div 
+          [ngClass]="{ 'bubble-long-content' : bubble.longText }"
+          class="bubble">
+          <span class="bubble-text">{{ bubble.title }}</span>
+          <p 
+            class="bubble-content" 
+            [innerHTML]="bubble.content"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
