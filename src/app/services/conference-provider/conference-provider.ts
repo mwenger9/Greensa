@@ -5,19 +5,19 @@ export class ConferenceProvider {
 	private static conferenceDatas: Conference[] = [
 		{
 			date: new Date(2022, 11, 8),
-			image: '/assets/images/conf_walter_bouvais.png',
+			image: 'assets/images/confwalterbouvais.png',
 			title: 'Conference avec Walter Bouvais',
 			details: "Une conférence sur l'économie regénérative, une économie qui prendrait en compte les ressources planétaires et plus généralement comment penser la place des ingénieur.e.s et repenser les métiers actuels face aux défis écologiques"
 		},
 		{
 			date: new Date(2023, 1, 1),
-			image: '/assets/images/conf_delphine_batho.jpg',
+			image: 'assets/images/confdelphinebatho.jpg',
 			title: 'Conference avec Delphine Batho',
 			details: "Ministre de l'écologie, du développement durable et de l'énergie en 2012, Delphine Batho se présente en 2021 aux primaires des écologistes et arrive en troisième position. Actuellement députée des Deux-Sèvres, elle prône la décroissance et se présente comme écoféministe."
 		},
 		{
 			date: new Date(2023, 4, 5),
-			image: '/assets/images/conf_sea_shepherd.png',
+			image: 'assets/images/confseashepherd.png',
 			title: 'Conference avec Sea Shepherd',
 			details: "Conférence animée par 3 bénévoles de Sea Shepherd !ONG incontournable de la défense des océans ! Les bénévoles seront là pour nous faire connaître leur ONG, leurs actions et missions, aborderont le problème de captures de dauphins en Atlantique ainsi que leur opération Dolphin Bycatch"
 		},
@@ -29,7 +29,7 @@ export class ConferenceProvider {
 		}
 		// {
 		// 	date: new Date(2025, 0, 1),
-		// 	image: '/assets/images/conf_sea_shepherd.png',
+		// 	image: 'assets/images/conf_sea_shepherd.png',
 		// 	title: 'Test',
 		// 	details: 'TEST'
 		// }

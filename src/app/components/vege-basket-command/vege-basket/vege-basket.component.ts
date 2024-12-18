@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class VegeBasketComponent {
   @Input() size : string = "small";
-  @Input() basketImagePath : string = 'assets/images/vege_basket_default.png';
+  @Input() basketImagePath : string = 'assets/images/vegebasketdefault.png';
   @Input() basketDescription : string = 'Il est bon mon panier !';
 }

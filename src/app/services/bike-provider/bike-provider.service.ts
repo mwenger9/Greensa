@@ -9,37 +9,37 @@ export class BikeProviderService {
     private static bikesData: Bike[] = [
       { 
         name : "Vélo 1",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 2",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 3",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 4",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 5",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 6",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
       { 
         name : "Vélo 7",
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : "Bah mon vélooh !"
       },
     ];
@@ -48,7 +48,7 @@ export class BikeProviderService {
     public static getDefaultBikeData() : Bike {
       return {
         name : '0000',
-        imagePath : '/assets/images/image10.png',
+        imagePath : 'assets/images/image10.png',
         description : 'test'
       }
     }
